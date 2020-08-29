@@ -1,0 +1,11 @@
+def list_contents(your_list):
+    if len(your_list) == 0:
+        return "This list does not contain anything."
+    order = your_list[0]
+    if len(your_list) == 1:
+        return order
+    else:
+        for foods in your_list[1:-1]:
+            order += ", " + foods
+    order = f"This list contains the following: \n{order}, and {your_list[-1]}."
+    return order
