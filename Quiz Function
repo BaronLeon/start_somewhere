@@ -1,0 +1,22 @@
+def quiz(attempts, answer, question):
+    if attempts == 1:
+        st_answer = input(question + " ")
+        if st_answer.lower() == answer.lower():
+            print("Correct!")
+        else:
+            print(f"Incorrect, the correct answer is {answer}.")
+    elif attempts > 1:
+        while attempts > 0:
+            st_answer = input(question + " ")
+            if st_answer.lower() == answer.lower():
+                return print("Correct!")
+            else:
+                attempts -= 1
+                if attempts >= 2:
+                    print(f"I'm sorry that answer is incorrect. \nYou have {attempts} remaining attempts" + "\n")
+                if attempts == 1:
+                    print(f"I'm sorry that answer is incorrect. \nYou have {attempts} final attempt remaining." + "\n")
+                if attempts == 0:
+                    return print( f"\nI'm sorry that answer is incorrect. \nThe correct answer is \n{answer}.")
+    else:
+        print("attempts must be at least 1 or more")\
