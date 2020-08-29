@@ -1,0 +1,30 @@
+import random
+def rock_paper_scissors (rock,paper,scissors):
+    moves = ["rock", "paper", "scissors"]
+    user_input = input("Rock, Paper, or Scissors ").lower()
+    if user_input.startswith("r"):
+        user_move = "rock"
+    elif user_input.startswith("s"):
+        user_move = "scissors"
+    elif user_input.startswith("p"):
+        user_move = "paper"
+    rand = random.randint(0, 2)
+    comp_move = moves[rand]
+    print(f"You played {user_move} \ncomputer played {comp_move}")
+    if user_move == comp_move:
+        print("tie")
+    elif user_move == "rock":
+        if comp_move == "paper":
+            print("loss")
+        elif comp_move == "scissors":
+            print("win")
+    elif user_move == "paper":
+        if comp_move == "scissors":
+            print("loss")
+        elif comp_move == "rock":
+            print("win")
+    elif user_move == "scissors":
+        if comp_move == "rock":
+            print("loss")
+        elif comp_move == "paper":
+            print("w
