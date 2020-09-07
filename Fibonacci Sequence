@@ -1,0 +1,9 @@
+start = 0
+i = 1
+top = 1000
+
+print(start)
+while i < top:
+    print(i)
+    i = i + start
+    start = i - start
