@@ -1,0 +1,14 @@
+input_a = "string"
+input_b = "grits"
+list_a = []
+list_b = []
+for letters in input_a:
+    list_a.append(letters)
+for letters in input_b:
+    list_b.append(letters)
+list_a.sort()
+list_b.sort()
+if list_a == list_b:
+    print("These words are anagrams")
+else:
+    print("These words are not anagrams")
